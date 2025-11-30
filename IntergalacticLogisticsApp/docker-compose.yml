@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:14-alpine
+    container_name: intergalactic-logistics-db
+    environment:
+      POSTGRES_DB: IntergalacticLogistics
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: rawan
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - intergalactic-network
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: intergalactic-logistics-api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5000
+      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=IntergalacticLogistics;Username=postgres;Password=rawan
+    ports:
+      - "5000:5000"
+      - "5001:5001"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - intergalactic-network
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+
+networks:
+  intergalactic-network:
+    driver: bridge
+
