@@ -1,0 +1,86 @@
+[
+  {
+    "ContainingType": "IntergalacticLogistics.Api.Controllers.PlanetsController",
+    "Method": "GetAllPlanets",
+    "RelativePath": "api/Planets",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IntergalacticLogistics.Api.Controllers.PlanetsController",
+    "Method": "GetPlanet",
+    "RelativePath": "api/Planets/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IntergalacticLogistics.Api.Controllers.ShipmentsController",
+    "Method": "CreateShipment",
+    "RelativePath": "api/Shipments",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "IntergalacticLogistics.Application.Commands.CreateShipmentCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IntergalacticLogistics.Api.Controllers.ShipmentsController",
+    "Method": "GetShipment",
+    "RelativePath": "api/Shipments/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IntergalacticLogistics.Api.Controllers.StarshipsController",
+    "Method": "GetAllStarships",
+    "RelativePath": "api/Starships",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IntergalacticLogistics.Api.Controllers.StarshipsController",
+    "Method": "GetStarship",
+    "RelativePath": "api/Starships/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
