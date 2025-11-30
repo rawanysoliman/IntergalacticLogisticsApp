@@ -1,0 +1,73 @@
+/* Utility classes following BEM-like naming for utilities */
+.u-margin-top-sm {
+  margin-top: var(--spacing-sm);
+}
+
+.u-margin-top-md {
+  margin-top: var(--spacing-md);
+}
+
+.u-margin-top-lg {
+  margin-top: var(--spacing-lg);
+}
+
+.u-margin-bottom-sm {
+  margin-bottom: var(--spacing-sm);
+}
+
+.u-margin-bottom-md {
+  margin-bottom: var(--spacing-md);
+}
+
+.u-margin-bottom-lg {
+  margin-bottom: var(--spacing-lg);
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+.u-text-right {
+  text-align: right;
+}
+
+.u-full-width {
+  width: 100%;
+}
+
+.u-flex {
+  display: flex;
+}
+
+.u-flex-column {
+  flex-direction: column;
+}
+
+.u-flex-wrap {
+  flex-wrap: wrap;
+}
+
+.u-justify-center {
+  justify-content: center;
+}
+
+.u-justify-between {
+  justify-content: space-between;
+}
+
+.u-align-center {
+  align-items: center;
+}
+
+.u-gap-sm {
+  gap: var(--spacing-sm);
+}
+
+.u-gap-md {
+  gap: var(--spacing-md);
+}
+
+.u-gap-lg {
+  gap: var(--spacing-lg);
+}
+

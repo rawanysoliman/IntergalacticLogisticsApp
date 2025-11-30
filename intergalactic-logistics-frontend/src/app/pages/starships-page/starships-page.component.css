@@ -1,0 +1,72 @@
+
+.starships-page {
+  padding: var(--spacing-xl);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+
+.starships-page__header {
+  text-align: center;
+  margin-bottom: var(--spacing-xxl);
+}
+
+
+.starships-page__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+}
+
+.starships-page__subtitle {
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+
+.starships-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--spacing-lg);
+  align-items: stretch; /* Make all cards equal height */
+}
+
+@media (max-width: 768px) {
+  .starships-page__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.starships-page__loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xxl);
+  gap: var(--spacing-md);
+}
+
+
+.starships-page__loading-text {
+  color: #210338;
+  font-size: 1rem;
+}
+
+
+.starships-page__error {
+  margin: var(--spacing-lg) 0;
+}
+
+
+.starships-page__empty {
+  text-align: center;
+  padding: var(--spacing-xxl);
+}
+
+
+.starships-page__empty-text {
+  font-size: 1.125rem;
+  color: #6c757d;
+}
+

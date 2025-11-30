@@ -1,0 +1,141 @@
+<div class="book-shipment-form">
+  <h2 class="book-shipment-form__title mb-4">Book a Shipment</h2>
+
+  <app-notification
+    [message]="notificationMessage()"
+    [type]="notificationType()"
+    [visible]="notificationVisible()"
+    (dismissed)="onNotificationDismiss()"
+  ></app-notification>
+
+  <form [formGroup]="shipmentForm" (ngSubmit)="onSubmit()" class="book-shipment-form__form">
+    <div class="book-shipment-form__field mb-3 ">
+      <label for="starshipId" class="form-label book-shipment-form__label">Starship *</label>
+      <select
+        id="starshipId"
+        formControlName="starshipId"
+        class="form-select book-shipment-form__select"
+        [class.is-invalid]="shipmentForm.get('starshipId')?.invalid && shipmentForm.get('starshipId')?.touched"
+      >
+        <option value="">Select starship</option>
+        @for (starship of starships(); track starship.name) {
+          <option [value]="starship.name">{{ starship.name }} ({{ starship.model }})</option>
+        }
+      </select>
+      @if (shipmentForm.get('starshipId')?.invalid && shipmentForm.get('starshipId')?.touched) {
+        <span class="book-shipment-form__error text-danger small">Required</span>
+      }
+    </div>
+
+    <div class="row book-shipment-form__row">
+      <div class="col-md-6 book-shipment-form__field mb-3">
+        <label for="origin" class="form-label book-shipment-form__label">Origin *</label>
+        <select
+          id="origin"
+          formControlName="origin"
+          class="form-select book-shipment-form__select"
+          [class.is-invalid]="(shipmentForm.get('origin')?.invalid && shipmentForm.get('origin')?.touched) || shipmentForm.errors?.['sameOriginDestination']"
+        >
+          <option value="">Select planet</option>
+          @for (planet of planets(); track planet.name) {
+            <option [value]="planet.name">{{ planet.name }}</option>
+          }
+        </select>
+        @if (shipmentForm.get('origin')?.invalid && shipmentForm.get('origin')?.touched) {
+          <span class="book-shipment-form__error text-danger small">Required</span>
+        }
+      </div>
+
+      <div class="col-md-6 book-shipment-form__field mb-3">
+        <label for="destination" class="form-label book-shipment-form__label">Destination *</label>
+        <select
+          id="destination"
+          formControlName="destination"
+          class="form-select book-shipment-form__select"
+          [class.is-invalid]="(shipmentForm.get('destination')?.invalid && shipmentForm.get('destination')?.touched) || shipmentForm.errors?.['sameOriginDestination']"
+        >
+          <option value="">Select planet</option>
+          @for (planet of planets(); track planet.name) {
+            <option [value]="planet.name">{{ planet.name }}</option>
+          }
+        </select>
+        @if (shipmentForm.get('destination')?.invalid && shipmentForm.get('destination')?.touched) {
+          <span class="book-shipment-form__error text-danger small">Required</span>
+        }
+        @if (shipmentForm.errors?.['sameOriginDestination'] && shipmentForm.get('destination')?.touched && shipmentForm.get('origin')?.touched) {
+          <span class="book-shipment-form__error text-danger small">Origin and destination cannot be the same</span>
+        }
+      </div>
+    </div>
+
+    <div class="row book-shipment-form__row">
+      <div class="col-md-6 book-shipment-form__field mb-3">
+        <label for="cargoWeight" class="form-label book-shipment-form__label">Cargo Weight (tons) *</label>
+        <input
+          type="number"
+          id="cargoWeight"
+          formControlName="cargoWeight"
+          class="form-control book-shipment-form__input"
+          [class.is-invalid]="shipmentForm.get('cargoWeight')?.invalid && shipmentForm.get('cargoWeight')?.touched"
+          placeholder="0.00"
+          step="0.01"
+          min="0"
+          max="10000"
+        />
+        @if (shipmentForm.get('cargoWeight')?.invalid && shipmentForm.get('cargoWeight')?.touched) {
+          <span class="book-shipment-form__error text-danger small">
+            @if (shipmentForm.get('cargoWeight')?.errors?.['required']) {
+              Required
+            } @else if (shipmentForm.get('cargoWeight')?.errors?.['min']) {
+              Weight must be greater than 0
+            } @else if (shipmentForm.get('cargoWeight')?.errors?.['max']) {
+              Max: {{ shipmentForm.get('cargoWeight')?.errors?.['max'].max }} tons
+            } @else {
+              Invalid
+            }
+          </span>
+        }
+      </div>
+
+      <div class="col-md-6 book-shipment-form__field mb-3">
+        <label for="shippingMethod" class="form-label book-shipment-form__label">Shipping Method *</label>
+        <select
+          id="shippingMethod"
+          formControlName="shippingMethod"
+          class="form-select book-shipment-form__select"
+          [class.is-invalid]="shipmentForm.get('shippingMethod')?.invalid && shipmentForm.get('shippingMethod')?.touched"
+        >
+          @for (method of shippingMethods; track method.value) {
+            <option [value]="method.value">{{ method.label }}</option>
+          }
+        </select>
+        @if (shipmentForm.get('shippingMethod')?.invalid && shipmentForm.get('shippingMethod')?.touched) {
+          <span class="book-shipment-form__error text-danger small">Required</span>
+        }
+      </div>
+    </div>
+
+    <div class="book-shipment-form__actions d-flex gap-2 mt-4">
+      <button
+        type="submit"
+        class="btn btn-primary book-shipment-form__button book-shipment-form__button--primary"
+        [disabled]="!shipmentForm.valid || submitting()"
+      >
+        @if (submitting()) {
+          <span class="spinner-border spinner-border-sm me-2"></span>
+          Booking...
+        } @else {
+          Book Shipment
+        }
+      </button>
+      <button
+        type="button"
+        class="btn btn-secondary book-shipment-form__button book-shipment-form__button--secondary"
+        (click)="shipmentForm.reset({ shippingMethod: 'StandardSpeed' })"
+        [disabled]="submitting()"
+      >
+        Reset
+      </button>
+    </div>
+  </form>
+</div>

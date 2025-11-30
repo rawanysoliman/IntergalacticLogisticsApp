@@ -1,0 +1,13 @@
+@if (visible()) {
+  <div class="alert alert-dismissible fade show notification"
+       [class.alert-success]="type() === 'success'"
+       [class.alert-danger]="type() === 'error'"
+       [class.alert-warning]="type() === 'warning'"
+       [class.alert-info]="type() === 'info'"
+       role="alert">
+    <div class="d-flex justify-content-between align-items-center">
+      <span class="notification__message">{{ message() }}</span>
+      <button type="button" class="btn-close" (click)="onDismiss()" aria-label="Close"></button>
+    </div>
+  </div>
+}

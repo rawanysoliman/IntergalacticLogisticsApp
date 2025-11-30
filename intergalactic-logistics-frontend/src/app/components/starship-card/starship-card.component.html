@@ -1,0 +1,39 @@
+<div class="card h-100 starship-card">
+  <div class="card-header d-flex justify-content-between align-items-start starship-card__header">
+    <h5 class="card-title mb-0 starship-card__title">{{ starship().name }}</h5>
+    <span class="badge bg-primary starship-card__class">{{ starship().starshipClass }}</span>
+  </div>
+  
+  <div class="card-body d-flex flex-column starship-card__body">
+    <div class="d-flex justify-content-between mb-2 starship-card__detail">
+      <span class="text-muted fw-medium starship-card__label">Model:</span>
+      <span class="text-end starship-card__value">{{ starship().model }}</span>
+    </div>
+    
+    <div class="d-flex justify-content-between mb-2 starship-card__detail">
+      <span class="text-muted fw-medium starship-card__label">Manufacturer:</span>
+      <span class="text-end starship-card__value">{{ starship().manufacturer }}</span>
+    </div>
+    
+    <div class="d-flex justify-content-between mb-2 starship-card__detail">
+      <span class="text-muted fw-medium starship-card__label">Hyperdrive Rating:</span>
+      <span class="text-end starship-card__value">{{ starship().hyperdriveRating || 'N/A' }}</span>
+    </div>
+    
+    <div class="d-flex justify-content-between mb-2 starship-card__detail">
+      <span class="text-muted fw-medium starship-card__label">Cargo Capacity:</span>
+      <span class="text-end starship-card__value">{{ starship().cargoCapacity || 'N/A' }}</span>
+    </div>
+    
+    <div class="d-flex justify-content-between mb-2 starship-card__detail">
+      <span class="text-muted fw-medium starship-card__label">Crew:</span>
+      <span class="text-end starship-card__value">{{ starship().crew }}</span>
+    </div>
+    
+    <div class="d-flex justify-content-between mb-2 starship-card__detail">
+      <span class="text-muted fw-medium starship-card__label">Passengers:</span>
+      <span class="text-end starship-card__value">{{ starship().passengers }}</span>
+    </div>
+  </div>
+</div>
+

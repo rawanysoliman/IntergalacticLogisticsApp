@@ -1,0 +1,44 @@
+<div class="starships-page container py-4">
+
+  <header class="starships-page__header text-center mb-5">
+    <h1 class="starships-page__title text-dark">Available Starships</h1>
+    <p class="starships-page__subtitle text-dark-50">Available starships for your intergalactic shipment</p>
+  </header>
+
+  @if (loading()) {
+    <div class="starships-page__loading">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <p class="starships-page__loading-text">Loading starships...</p>
+    </div>
+  }
+
+  @if (error()) {
+    <div class="starships-page__error">
+      <div class="alert alert-danger" role="alert">
+        <strong>Error:</strong> {{ error() }}
+        <button
+          type="button" class="btn btn-sm btn-outline-danger ms-2"(click)="loadStarships()">
+          Retry
+        </button>
+      </div>
+    </div>
+  }
+
+  @if (!loading() && !error() && starships().length === 0) {
+    <div class="starships-page__empty">
+      <p class="starships-page__empty-text">No starships available at this time.</p>
+    </div>
+  }
+
+  @if (!loading() && !error() && starships().length > 0) {
+    <div class="starships-page__grid">
+      @for (starship of starships(); track starship.name) {
+        
+        <app-starship-card [starship]="starship"></app-starship-card>
+      }
+    </div>
+  }
+</div>
+

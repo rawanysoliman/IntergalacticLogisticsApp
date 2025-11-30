@@ -1,0 +1,101 @@
+/* Block: starship-card - Modern violet galaxy style */
+.starship-card {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(118, 75, 162, 0.3) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.2), 
+              0 2px 8px rgba(118, 75, 162, 0.15) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 280px;
+  overflow: hidden;
+  position: relative;
+}
+
+.starship-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  opacity: 0.8;
+}
+
+.starship-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(102, 126, 234, 0.35), 
+              0 4px 16px rgba(118, 75, 162, 0.25) !important;
+  border-color: rgba(118, 75, 162, 0.5) !important;
+}
+
+.starship-card__header {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%) !important;
+  border-bottom: 2px solid rgba(118, 75, 162, 0.2) !important;
+  padding: 1rem 1.25rem !important;
+  gap: 0.5rem;
+}
+
+.starship-card__title {
+  line-height: 1.3;
+  word-wrap: break-word;
+  flex: 1;
+  min-width: 0;
+  color: #4a5568;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.starship-card__class {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  border: none !important;
+  padding: 0.4rem 0.8rem !important;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.starship-card__body {
+  flex: 1;
+  padding: 1.25rem !important;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.starship-card__detail {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(118, 75, 162, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+.starship-card__detail:last-child {
+  border-bottom: none;
+}
+
+.starship-card__detail:hover {
+  background-color: rgba(102, 126, 234, 0.05);
+  border-radius: 6px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+.starship-card__label {
+  min-width: 140px;
+  flex-shrink: 0;
+  color: #6b7280;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.starship-card__value {
+  word-wrap: break-word;
+  word-break: break-word;
+  flex: 1;
+  min-width: 0;
+  color: #1f2937;
+  font-weight: 500;
+}
+
