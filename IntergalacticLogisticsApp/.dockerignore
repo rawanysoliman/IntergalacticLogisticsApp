@@ -1,38 +1,41 @@
-**/.dockerignore
-**/.git
-**/.gitignore
-**/.vs
-**/.vscode
-**/*.*proj.user
-**/*.dbmdl
-**/*.jfm
-**/bin
-**/charts
-**/docker-compose*
-**/Dockerfile*
-**/node_modules
-**/npm-debug.log
-**/obj
-**/secrets.dev.yaml
-**/values.dev.yaml
-README.md
-**/.dockerignore
-**/.git
-**/.gitignore
-**/.vs
-**/.vscode
-**/*.*proj.user
-**/*.dbmdl
-**/*.jfm
-**/bin
-**/charts
-**/docker-compose*
-**/Dockerfile*
-**/node_modules
-**/npm-debug.log
-**/obj
-**/secrets.dev.yaml
-**/values.dev.yaml
-README.md
-intergalactic-logistics-frontend/
+# .NET build outputs
+**/bin/
+**/obj/
+**/out/
 
+# Frontend build outputs (will be built in Docker)
+intergalactic-logistics-frontend/dist/
+intergalactic-logistics-frontend/node_modules/
+
+# Backend node_modules (if any)
+**/node_modules/
+
+# IDE files
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+
+# Git
+.git/
+.gitignore
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose.yml
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+**/appsettings.*.json
+!**/appsettings.json
+!**/appsettings.Development.json

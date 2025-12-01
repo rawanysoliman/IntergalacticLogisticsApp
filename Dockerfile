@@ -18,8 +18,10 @@ RUN npm run build -- --configuration production
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS backend-build
 WORKDIR /app
 
+
+
 # Step 1: Copy solution file for caching
-COPY IntergalacticLogisticsApp/*.sln ./
+COPY IntergalacticLogisticsApp/IntergalacticLogisticsApp.sln ./
 
 # Step 2: Copy individual .csproj files for caching
 COPY IntergalacticLogisticsApp/IntergalacticLogisticsApp/*.csproj ./IntergalacticLogisticsApp/
@@ -27,6 +29,7 @@ COPY IntergalacticLogisticsApp/IntergalacticLogistics.Api/*.csproj ./Intergalact
 COPY IntergalacticLogisticsApp/IntergalacticLogistics.Application/*.csproj ./IntergalacticLogistics.Application/
 COPY IntergalacticLogisticsApp/IntergalacticLogistics.Domain/*.csproj ./IntergalacticLogistics.Domain/
 COPY IntergalacticLogisticsApp/IntergalacticLogistics.Infrastructure/*.csproj ./IntergalacticLogistics.Infrastructure/
+
 
 # Step 3: Restore dependencies
 RUN dotnet restore *.sln
@@ -37,7 +40,6 @@ COPY IntergalacticLogisticsApp/ ./
 # Step 5: Copy Angular build into API's wwwroot folder
 RUN mkdir -p IntergalacticLogistics.Api/wwwroot
 COPY --from=frontend-build /app/frontend/dist/intergalactic-logistics-frontend/browser ./IntergalacticLogistics.Api/wwwroot/
-
 
 # Rename index.csr.html to index.html for .NET fallback
 RUN mv IntergalacticLogistics.Api/wwwroot/index.csr.html IntergalacticLogistics.Api/wwwroot/index.html

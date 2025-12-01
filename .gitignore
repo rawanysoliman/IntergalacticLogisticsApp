@@ -56,3 +56,7 @@ node_modules/
 # obj/
 # dist/
 
+# wwwroot contents (Angular build files - generated during Docker build)
+IntergalacticLogisticsApp/IntergalacticLogistics.Api/wwwroot/*
+!IntergalacticLogisticsApp/IntergalacticLogistics.Api/wwwroot/.gitkeep
+

@@ -10,7 +10,8 @@ import { CreateShipmentRequest, Shipment } from '../models/shipment.model';
 })
 export class StarshipService {
   private readonly http = inject(HttpClient);
-  private readonly apiUrl = 'https://localhost:5001/api';
+  // Use relative path when served from same origin, or absolute for development
+  private readonly apiUrl = '/api';
 
   getStarships(): Observable<StarshipInfo[]> {
     return this.http.get<StarshipInfo[]>(`${this.apiUrl}/Starships`);

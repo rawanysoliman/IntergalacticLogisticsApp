@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.9"
 
 services:
   postgres:
@@ -12,13 +12,12 @@ services:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    networks:
+      - intergalactic-network
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
       interval: 10s
-      timeout: 5s
       retries: 5
-    networks:
-      - intergalactic-network
 
   api:
     build:
@@ -27,11 +26,10 @@ services:
     container_name: intergalactic-logistics-api
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=http://+:5000
+      - ASPNETCORE_URLS=http://+:80
       - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=IntergalacticLogistics;Username=postgres;Password=rawan
     ports:
-      - "5000:5000"
-      - "5001:5001"
+      - "5000:80"
     depends_on:
       postgres:
         condition: service_healthy
@@ -45,4 +43,3 @@ volumes:
 networks:
   intergalactic-network:
     driver: bridge
-

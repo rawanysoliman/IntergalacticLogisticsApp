@@ -232,8 +232,6 @@ C:\Users\LOQ\source\repos\IntergalacticLogisticsApp\IntergalacticLogistics.Api\o
 C:\Users\LOQ\source\repos\IntergalacticLogisticsApp\IntergalacticLogistics.Api\obj\Debug\net8.0\IntergalacticLogistics.Api.genruntimeconfig.cache
 C:\Users\LOQ\source\repos\IntergalacticLogisticsApp\IntergalacticLogistics.Api\obj\Debug\net8.0\ref\IntergalacticLogistics.Api.dll
 C:\Users\LOQ\source\repos\IntergalacticLogisticsApp\IntergalacticLogistics.Api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
-C:\Users\LOQ\Desktop\intergalacticLogistics\IntergalacticLogisticsApp\IntergalacticLogistics.Api\bin\Debug\net8.0\appsettings.Development.json
-C:\Users\LOQ\Desktop\intergalacticLogistics\IntergalacticLogisticsApp\IntergalacticLogistics.Api\bin\Debug\net8.0\appsettings.json
 C:\Users\LOQ\Desktop\intergalacticLogistics\IntergalacticLogisticsApp\IntergalacticLogistics.Api\bin\Debug\net8.0\IntergalacticLogistics.Api.staticwebassets.endpoints.json
 C:\Users\LOQ\Desktop\intergalacticLogistics\IntergalacticLogisticsApp\IntergalacticLogistics.Api\bin\Debug\net8.0\IntergalacticLogistics.Api.exe
 C:\Users\LOQ\Desktop\intergalacticLogistics\IntergalacticLogisticsApp\IntergalacticLogistics.Api\bin\Debug\net8.0\IntergalacticLogistics.Api.deps.json
@@ -258,8 +256,6 @@ C:\Users\LOQ\Desktop\intergalacticLogistics\IntergalacticLogisticsApp\Intergalac
 C:\Users\LOQ\Desktop\intergalacticLogistics\IntergalacticLogisticsApp\IntergalacticLogistics.Api\bin\Debug\net8.0\Microsoft.CodeAnalysis.VisualBasic.Workspaces.dll
 C:\Users\LOQ\Desktop\intergalacticLogistics\IntergalacticLogisticsApp\IntergalacticLogistics.Api\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
 C:\Users\LOQ\Desktop\intergalacticLogistics\IntergalacticLogisticsApp\IntergalacticLogistics.Api\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
-C:\Users\LOQ\Desktop\intergalacticLogistics\IntergalacticLogisticsApp\IntergalacticLogistics.Api\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
-C:\Users\LOQ\Desktop\intergalacticLogistics\IntergalacticLogisticsApp\IntergalacticLogistics.Api\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\LOQ\Desktop\intergalacticLogistics\IntergalacticLogisticsApp\IntergalacticLogistics.Api\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
 C:\Users\LOQ\Desktop\intergalacticLogistics\IntergalacticLogisticsApp\IntergalacticLogistics.Api\bin\Debug\net8.0\Microsoft.Extensions.Configuration.FileExtensions.dll
 C:\Users\LOQ\Desktop\intergalacticLogistics\IntergalacticLogisticsApp\IntergalacticLogistics.Api\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Json.dll
@@ -280,8 +276,6 @@ C:\Users\LOQ\Desktop\intergalacticLogistics\IntergalacticLogisticsApp\Intergalac
 C:\Users\LOQ\Desktop\intergalacticLogistics\IntergalacticLogisticsApp\IntergalacticLogistics.Api\bin\Debug\net8.0\Microsoft.Extensions.Logging.EventLog.dll
 C:\Users\LOQ\Desktop\intergalacticLogistics\IntergalacticLogisticsApp\IntergalacticLogistics.Api\bin\Debug\net8.0\Microsoft.Extensions.Logging.EventSource.dll
 C:\Users\LOQ\Desktop\intergalacticLogistics\IntergalacticLogisticsApp\IntergalacticLogistics.Api\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
-C:\Users\LOQ\Desktop\intergalacticLogistics\IntergalacticLogisticsApp\IntergalacticLogistics.Api\bin\Debug\net8.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
-C:\Users\LOQ\Desktop\intergalacticLogistics\IntergalacticLogisticsApp\IntergalacticLogistics.Api\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
 C:\Users\LOQ\Desktop\intergalacticLogistics\IntergalacticLogisticsApp\IntergalacticLogistics.Api\bin\Debug\net8.0\Microsoft.OpenApi.dll
 C:\Users\LOQ\Desktop\intergalacticLogistics\IntergalacticLogisticsApp\IntergalacticLogistics.Api\bin\Debug\net8.0\NetTopologySuite.dll
 C:\Users\LOQ\Desktop\intergalacticLogistics\IntergalacticLogisticsApp\IntergalacticLogistics.Api\bin\Debug\net8.0\NetTopologySuite.IO.PostGis.dll
@@ -471,3 +465,5 @@ C:\Users\LOQ\Desktop\intergalacticLogistics\IntergalacticLogisticsApp\Intergalac
 C:\Users\LOQ\Desktop\intergalacticLogistics\IntergalacticLogisticsApp\IntergalacticLogistics.Api\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\LOQ\Desktop\intergalacticLogistics\IntergalacticLogisticsApp\IntergalacticLogistics.Api\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
 C:\Users\LOQ\Desktop\intergalacticLogistics\IntergalacticLogisticsApp\IntergalacticLogistics.Api\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\LOQ\Desktop\intergalacticLogistics\IntergalacticLogisticsApp\IntergalacticLogistics.Api\bin\Debug\net8.0\IntergalacticLogistics.Api.staticwebassets.runtime.json
+C:\Users\LOQ\Desktop\intergalacticLogistics\IntergalacticLogisticsApp\IntergalacticLogistics.Api\obj\Debug\net8.0\IntergalacticLogistics.Api.sourcelink.json

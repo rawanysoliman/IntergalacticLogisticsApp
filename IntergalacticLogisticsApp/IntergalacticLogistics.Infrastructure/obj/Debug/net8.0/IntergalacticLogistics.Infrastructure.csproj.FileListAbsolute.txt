@@ -32,3 +32,4 @@ C:\Users\LOQ\Desktop\intergalacticLogistics\IntergalacticLogisticsApp\Intergalac
 C:\Users\LOQ\Desktop\intergalacticLogistics\IntergalacticLogisticsApp\IntergalacticLogistics.Infrastructure\obj\Debug\net8.0\refint\IntergalacticLogistics.Infrastructure.dll
 C:\Users\LOQ\Desktop\intergalacticLogistics\IntergalacticLogisticsApp\IntergalacticLogistics.Infrastructure\obj\Debug\net8.0\IntergalacticLogistics.Infrastructure.pdb
 C:\Users\LOQ\Desktop\intergalacticLogistics\IntergalacticLogisticsApp\IntergalacticLogistics.Infrastructure\obj\Debug\net8.0\ref\IntergalacticLogistics.Infrastructure.dll
+C:\Users\LOQ\Desktop\intergalacticLogistics\IntergalacticLogisticsApp\IntergalacticLogistics.Infrastructure\obj\Debug\net8.0\IntergalacticLogistics.Infrastructure.sourcelink.json

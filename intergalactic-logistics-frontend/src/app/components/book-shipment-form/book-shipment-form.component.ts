@@ -108,7 +108,7 @@ export class BookShipmentFormComponent implements OnInit {
     const swapiId = starship?.swapiId || '';
 
 
-    console.log('Sending shipment request:', { swapiId, starshipName, shippingMethod: formValue.shippingMethod });
+    // console.log('Sending shipment request:', { swapiId, starshipName, shippingMethod: formValue.shippingMethod });
 
     const request: CreateShipmentRequest = {
       starshipId: swapiId, // Send SWAPI numeric ID for backend lookup

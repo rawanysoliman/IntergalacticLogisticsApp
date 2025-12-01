@@ -75,15 +75,26 @@ builder.Services.AddScoped<Func<string, IShippingCostStrategy>>(serviceProvider 
 // Register HttpClient for SwapiClient and register ISwapiClient interface
 builder.Services.AddHttpClient<ISwapiClient, SwapiClient>();
 
-// Configure CORS for Angular
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AngularPolicy", policy =>
     {
-        policy.WithOrigins("http://localhost:4200", "https://localhost:4200")
-              .AllowAnyMethod()
-              .AllowAnyHeader()
-              .AllowCredentials();
+
+        if (builder.Environment.IsDevelopment())
+        {
+            policy.WithOrigins("http://localhost:4200", "https://localhost:4200")
+                  .AllowAnyMethod()
+                  .AllowAnyHeader()
+                  .AllowCredentials();
+        }
+        else
+        {
+            // In production, allow same origin (frontend served from wwwroot)
+            policy.AllowAnyOrigin()
+                  .AllowAnyMethod()
+                  .AllowAnyHeader();
+        }
     });
 });
 
@@ -114,11 +125,19 @@ app.UseHttpsRedirection();
 // CORS must be before UseAuthorization
 app.UseCors("AngularPolicy");
 
+// Serve static files from wwwroot (Angular build)
+app.UseStaticFiles();
+
 app.UseAuthorization();
+
+// Map API controllers
 app.MapControllers();
 
 // Map Wolverine HTTP endpoints
 app.MapWolverineEndpoints();
+
+// Fallback to index.html for Angular routing (must be last)
+app.MapFallbackToFile("index.html");
 
 app.Run();
 
