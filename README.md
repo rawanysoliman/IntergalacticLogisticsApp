@@ -128,57 +128,6 @@ The system uses the **Strategy Pattern** to calculate shipping costs:
    - HyperdriveExpress: +100 credits
    - SmugglerRoute: +25 credits
 
-## 🐳 Docker Compose
-
-The `docker-compose.yml` file includes:
-- **PostgreSQL**: Database for Marten document storage
-- **API**: ASP.NET Core Web API
-
-To start:
-```bash
-docker-compose up -d
-```
-
-To stop:
-```bash
-docker-compose down
-```
-
-To view logs:
-```bash
-docker-compose logs -f
-```
-
-## 🛠️ Development
-
-### Backend Development
-
-```bash
-# Restore packages
-dotnet restore
-
-# Build
-dotnet build
-
-# Run
-cd IntergalacticLogistics.Api
-dotnet run
-```
-
-### Frontend Development
-
-```bash
-cd intergalactic-logistics-frontend
-
-# Install dependencies
-npm install
-
-# Start development server
-npm start
-
-# Build for production
-npm run build
-```
 
 ## 📝 Key Design Patterns
 
@@ -187,30 +136,6 @@ npm run build
 3. **Repository Pattern**: Shipment data access abstraction
 4. **Factory Pattern**: Strategy selection factory
 
-
-
-
-
-
-## 🔍 Troubleshooting
-
-### Hyperdrive fees not being added
-
-1. Check that `swapiId` is being sent from frontend (check browser console)
-2. Verify backend logs show starship lookup and hyperdrive rating
-3. Ensure SWAPI is accessible and returning starship data
-
-### Database connection issues
-
-1. Verify PostgreSQL is running
-2. Check connection string in `appsettings.json`
-3. Ensure database exists: `createdb IntergalacticLogistics`
-
-### CORS errors
-
-1. Verify API CORS configuration in `Program.cs`
-2. Check frontend API URL matches allowed origins
-3. Ensure credentials are handled correctly
 
 ## 📚 Technologies
 
