@@ -23,21 +23,20 @@ This project follows **Clean Architecture** principles with clear separation of 
 ### Option 1: Using Docker Compose (Recommended)
 
 1. **Start the database and API:**
+   Clone the repository and navigate into it with cd IntergalacticLogistics. Then build and start the containers using:
    ```bash
    docker-compose up -d
    ```
 
-2. **Run the frontend:**
+3. **Run the frontend:**
    ```bash
    cd intergalactic-logistics-frontend
    npm install
    npm start
    ```
 
-3. **Access the application:**
-   - Frontend: http://localhost:4200
-   - API: https://localhost:5001
-   - Swagger: https://localhost:5001/swagger
+4. **Access the application:**
+   - expose the API on http://localhost:5000 for the frontend and http://localhost:5000/swagger
 
 ### Option 2: Manual Setup
 
@@ -90,7 +89,7 @@ This project follows **Clean Architecture** principles with clear separation of 
 - **Reactive Forms**: Signal-based form validation
 - **Starships Page**: View available starships
 - **Book Shipment Form**: Create shipments with validation
-
+https://github.com/rawanysoliman/IntergalacticLogisticsApp/blob/master/README.md
 ## 🔧 Configuration
 
 ### Backend Configuration
